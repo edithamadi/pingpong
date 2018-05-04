@@ -1,4 +1,12 @@
-
+var countMax = function(numberCount){
+  var result = [];
+  for(var i=1; i <= numberCount; i++){
+    var index = result.indexOf(i);
+    if (i % 15 === 0){
+      result.splice(index, 0);
+    }
+  }
+}
 
 $(document).ready(function() {
   $("#numberInput").submit(function(event){
@@ -11,4 +19,3 @@ $(document).ready(function() {
     });
     event.preventDefault();
   });
-});
