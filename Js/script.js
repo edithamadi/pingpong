@@ -11,10 +11,11 @@ var countMax = function(numberCount){
       result.splice(index, 0);
       result.push('pong');
 
+    }else if (i % 3 === 0){
+      result.splice(index, 0);
+      result.push('ping');
+
     }
-
-
-  }
 }
 
 $(document).ready(function() {
