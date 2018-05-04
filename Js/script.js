@@ -2,9 +2,18 @@ var countMax = function(numberCount){
   var result = [];
   for(var i=1; i <= numberCount; i++){
     var index = result.indexOf(i);
+
     if (i % 15 === 0){
       result.splice(index, 0);
+      result.push('pingpong');
+
+    }else if (i % 5 === 0){
+      result.splice(index, 0);
+      result.push('pong');
+
     }
+
+
   }
 }
 
