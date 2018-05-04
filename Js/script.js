@@ -1,37 +1,28 @@
-var countMax = function(numberCount){
+//business logic
+function converter(input) {
   var result = [];
-  for(var i=1; i <= numberCount; i++){
-    var index = result.indexOf(i);
-
-    if (i % 15 === 0){
-      result.splice(index, 0);
-      result.push('pingpong');
-
-    }else if (i % 5 === 0){
-      result.splice(index, 0);
-      result.push('pong');
-
-    }else if (i % 3 === 0){
-      result.splice(index, 0);
-      result.push('ping');
-
-    }else {
-      result.push(i);
+  for(var i=1; i<= input; i++){
+    if ((i % 3 === 0) && (i % 5 === 0 )){
+      $(".output").append("<li>" + "pingpong" + "</li>");
+    } else if (i % 3 === 0) {
+      $(".output").append("<li>" + "ping" + "</li>");
     }
-}
-      return result;
-};
+    else if (i % 5 === 0) {
+      $(".output").append("<li>" + "pong" + "</li>");
+    }
+    else {
+        $(".output").append("<li>" + i + "</li>");
+      }
+    }
+  }
 
-
-
+//  user interface logic
 $(document).ready(function() {
-  $("#numberInput").submit(function(event){
-    $("#output").empty();
-    var numberCount = parseInt($("input#numberCount").val());
-    var output = countMax(numberCount);
+  $("form#numberInput").submit(function(event){
+    var input = $("input#number").val();
+    converter(input);
 
-    output.forEach(function(item){
-      $("#output").append('<li>' + item +'</li>');
-    });
     event.preventDefault();
+    });
+
   });
