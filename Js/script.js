@@ -15,8 +15,14 @@ var countMax = function(numberCount){
       result.splice(index, 0);
       result.push('ping');
 
+    }else {
+      result.push(i);
     }
 }
+      return result;
+};
+
+
 
 $(document).ready(function() {
   $("#numberInput").submit(function(event){
