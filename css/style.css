@@ -1,0 +1,23 @@
+.jumbotron{
+  margin: 0;
+  background: url(../images/pingpong.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10%;
+}
+.header{
+  background-color: #b0b8c4;
+}
+.space{
+  padding:5%;
+}
+.aboutping{
+  border: 1px solid black;
+  padding:5%;
+}
+.space2{
+  height: 30%;
+}
+.play{
+  float: right;
+}
