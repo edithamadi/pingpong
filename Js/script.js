@@ -20,9 +20,12 @@ function converter(input) {
 $(document).ready(function() {
   $("form#numberInput").submit(function(event){
     var input = $("input#number").val();
-    converter(input);
-
+    $(".output").text("");
+     converter(input);
+    $(".output").show();
+    $("#number").val("");
     event.preventDefault();
+
     });
 
   });
